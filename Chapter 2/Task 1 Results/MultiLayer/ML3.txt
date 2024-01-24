@@ -1,0 +1,98 @@
+model4 = Sequential()
+model4.add(Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model4.add(Conv2D(32, (3, 3), activation='relu', padding='same'))
+model4.add(MaxPooling2D((2, 2)))
+
+model4.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+model4.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
+model4.add(MaxPooling2D((2, 2)))
+
+model4.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
+model4.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
+model4.add(MaxPooling2D((2, 2)))
+
+model4.add(Flatten())
+model4.add(Dense(128, activation='relu'))
+
+model4.add(Dense(10, activation='softmax'))
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Train on 50000 samples
+2024-01-23 03:21:00.858328: W tensorflow/c/c_api.cc:300] Operation '{name:'training_38/RMSprop/conv2d_127/kernel/rms/Assign' id:11240 op device:{requested: '', assigned: ''} def:{{{node training_38/RMSprop/conv2d_127/kernel/rms/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](training_38/RMSprop/conv2d_127/kernel/rms, training_38/RMSprop/conv2d_127/kernel/rms/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Epoch 1/20
+50000/50000 [==============================] - 147s 3ms/sample - loss: 0.0224 - accuracy: 0.9929
+Epoch 2/20
+50000/50000 [==============================] - 147s 3ms/sample - loss: 0.0214 - accuracy: 0.9935
+Epoch 3/20
+50000/50000 [==============================] - 147s 3ms/sample - loss: 0.0215 - accuracy: 0.9938
+Epoch 4/20
+50000/50000 [==============================] - 151s 3ms/sample - loss: 0.0200 - accuracy: 0.9939
+Epoch 5/20
+50000/50000 [==============================] - 154s 3ms/sample - loss: 0.0171 - accuracy: 0.9946
+Epoch 6/20
+50000/50000 [==============================] - 153s 3ms/sample - loss: 0.0209 - accuracy: 0.9939
+Epoch 7/20
+50000/50000 [==============================] - 149s 3ms/sample - loss: 0.0212 - accuracy: 0.9933
+Epoch 8/20
+50000/50000 [==============================] - 149s 3ms/sample - loss: 0.0230 - accuracy: 0.9934
+Epoch 9/20
+50000/50000 [==============================] - 148s 3ms/sample - loss: 0.0213 - accuracy: 0.9938
+Epoch 10/20
+50000/50000 [==============================] - 151s 3ms/sample - loss: 0.0206 - accuracy: 0.9944
+Epoch 11/20
+50000/50000 [==============================] - 148s 3ms/sample - loss: 0.0189 - accuracy: 0.9945
+Epoch 12/20
+50000/50000 [==============================] - 149s 3ms/sample - loss: 0.0183 - accuracy: 0.9947
+Epoch 13/20
+50000/50000 [==============================] - 149s 3ms/sample - loss: 0.0185 - accuracy: 0.9945
+Epoch 14/20
+50000/50000 [==============================] - 151s 3ms/sample - loss: 0.0182 - accuracy: 0.9950
+Epoch 15/20
+50000/50000 [==============================] - 155s 3ms/sample - loss: 0.0198 - accuracy: 0.9948
+Epoch 16/20
+50000/50000 [==============================] - 150s 3ms/sample - loss: 0.0178 - accuracy: 0.9951
+Epoch 17/20
+50000/50000 [==============================] - 151s 3ms/sample - loss: 0.0181 - accuracy: 0.9952
+Epoch 18/20
+50000/50000 [==============================] - 148s 3ms/sample - loss: 0.0206 - accuracy: 0.9941
+Epoch 19/20
+50000/50000 [==============================] - 149s 3ms/sample - loss: 0.0202 - accuracy: 0.9946
+Epoch 20/20
+50000/50000 [==============================] - 149s 3ms/sample - loss: 0.0163 - accuracy: 0.9950
+2024-01-23 04:10:56.208562: W tensorflow/c/c_api.cc:300] Operation '{name:'loss_19/mul' id:11114 op device:{requested: '', assigned: ''} def:{{{node loss_19/mul}} = Mul[T=DT_FLOAT, _has_manual_control_dependencies=true](loss_19/mul/x, loss_19/dense_118_loss/value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Validation loss: 4.138787625312805
+Validation accuracy: 0.7451
+Time Elapsed: 3007.741378068924
+Model: "sequential_63"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_126 (Conv2D)         (None, 30, 30, 64)        1792      
+                                                                 
+ conv2d_127 (Conv2D)         (None, 28, 28, 64)        36928     
+                                                                 
+ max_pooling2d_109 (MaxPooli  (None, 14, 14, 64)       0         
+ ng2D)                                                           
+                                                                 
+ conv2d_128 (Conv2D)         (None, 12, 12, 128)       73856     
+                                                                 
+ conv2d_129 (Conv2D)         (None, 10, 10, 128)       147584    
+                                                                 
+ max_pooling2d_110 (MaxPooli  (None, 5, 5, 128)        0         
+ ng2D)                                                           
+                                                                 
+ flatten_56 (Flatten)        (None, 3200)              0         
+                                                                 
+ dense_116 (Dense)           (None, 512)               1638912   
+                                                                 
+ dense_117 (Dense)           (None, 256)               131328    
+                                                                 
+ dense_118 (Dense)           (None, 10)                2570      
+                                                                 
+=================================================================
+Total params: 2,032,970
+Trainable params: 2,032,970
+Non-trainable params: 0
+_________________________________________________________________

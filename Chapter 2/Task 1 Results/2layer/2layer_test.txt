@@ -1,0 +1,82 @@
+model = Sequential()
+model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+/Users/hasnatchowdhury/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/optimizers/legacy/rmsprop.py:143: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Epoch 1/20
+1563/1563 [==============================] - 29s 18ms/step - loss: 1.7763 - accuracy: 0.3697
+Epoch 2/20
+1563/1563 [==============================] - 28s 18ms/step - loss: 1.4555 - accuracy: 0.4841
+Epoch 3/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 1.3204 - accuracy: 0.5359
+Epoch 4/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 1.2359 - accuracy: 0.5661
+Epoch 5/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 1.1727 - accuracy: 0.5899
+Epoch 6/20
+1563/1563 [==============================] - 29s 19ms/step - loss: 1.1213 - accuracy: 0.6088
+Epoch 7/20
+1563/1563 [==============================] - 27s 18ms/step - loss: 1.0758 - accuracy: 0.6244
+Epoch 8/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 1.0384 - accuracy: 0.6371
+Epoch 9/20
+1563/1563 [==============================] - 27s 18ms/step - loss: 1.0023 - accuracy: 0.6504
+Epoch 10/20
+1563/1563 [==============================] - 28s 18ms/step - loss: 0.9701 - accuracy: 0.6630
+Epoch 11/20
+1563/1563 [==============================] - 28s 18ms/step - loss: 0.9414 - accuracy: 0.6748
+Epoch 12/20
+1563/1563 [==============================] - 29s 18ms/step - loss: 0.9160 - accuracy: 0.6829
+Epoch 13/20
+1563/1563 [==============================] - 30s 19ms/step - loss: 0.8923 - accuracy: 0.6935
+Epoch 14/20
+1563/1563 [==============================] - 29s 18ms/step - loss: 0.8683 - accuracy: 0.7013
+Epoch 15/20
+1563/1563 [==============================] - 29s 18ms/step - loss: 0.8470 - accuracy: 0.7084
+Epoch 16/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 0.8243 - accuracy: 0.7177
+Epoch 17/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 0.8057 - accuracy: 0.7235
+Epoch 18/20
+1563/1563 [==============================] - 27s 17ms/step - loss: 0.7855 - accuracy: 0.7304
+Epoch 19/20
+1563/1563 [==============================] - 28s 18ms/step - loss: 0.7673 - accuracy: 0.7361
+Epoch 20/20
+1563/1563 [==============================] - 28s 18ms/step - loss: 0.7506 - accuracy: 0.7418
+Validation loss: 0.9159343838691711
+Validation accuracy: 0.6886000037193298
+Time Elapsed: 562.1613910198212
+Model: "sequential_29"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_51 (Conv2D)          (None, 30, 30, 64)        1792      
+                                                                 
+ max_pooling2d_42 (MaxPoolin  (None, 15, 15, 64)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_52 (Conv2D)          (None, 13, 13, 64)        36928     
+                                                                 
+ max_pooling2d_43 (MaxPoolin  (None, 6, 6, 64)         0         
+ g2D)                                                            
+                                                                 
+ flatten_23 (Flatten)        (None, 2304)              0         
+                                                                 
+ dense_48 (Dense)            (None, 128)               295040    
+                                                                 
+ dense_49 (Dense)            (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 335,050
+Trainable params: 335,050
+Non-trainable params: 0
+_________________________________________________________________

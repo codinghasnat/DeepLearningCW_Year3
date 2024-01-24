@@ -1,0 +1,33 @@
+model = Sequential()
+model.add(Conv2D(64, (5, 5), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((3, 3)))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+
+Epoch 1: Training Accuracy = 0.4077, Validation Accuracy = 0.4848
+Epoch 2: Training Accuracy = 0.5183, Validation Accuracy = 0.5393
+Epoch 3: Training Accuracy = 0.5661, Validation Accuracy = 0.5507
+Epoch 4: Training Accuracy = 0.5961, Validation Accuracy = 0.5742
+Epoch 5: Training Accuracy = 0.6188, Validation Accuracy = 0.6000
+Epoch 6: Training Accuracy = 0.6344, Validation Accuracy = 0.6257
+Epoch 7: Training Accuracy = 0.6511, Validation Accuracy = 0.6052
+Epoch 8: Training Accuracy = 0.6622, Validation Accuracy = 0.6432
+Epoch 9: Training Accuracy = 0.6739, Validation Accuracy = 0.6321
+Epoch 10: Training Accuracy = 0.6844, Validation Accuracy = 0.6484
+Epoch 11: Training Accuracy = 0.6944, Validation Accuracy = 0.6568
+Epoch 12: Training Accuracy = 0.7054, Validation Accuracy = 0.6582
+Epoch 13: Training Accuracy = 0.7111, Validation Accuracy = 0.6710
+Epoch 14: Training Accuracy = 0.7224, Validation Accuracy = 0.6574
+Epoch 15: Training Accuracy = 0.7319, Validation Accuracy = 0.6485
+Epoch 16: Training Accuracy = 0.7386, Validation Accuracy = 0.6717
+Epoch 17: Training Accuracy = 0.7486, Validation Accuracy = 0.6737
+Epoch 18: Training Accuracy = 0.7545, Validation Accuracy = 0.6868
+Epoch 19: Training Accuracy = 0.7631, Validation Accuracy = 0.6607
+Epoch 20: Training Accuracy = 0.7717, Validation Accuracy = 0.6874
+
+
+Validation accuracy: 0.6858000159263611
+Validation loss: 0.9283711910247803
+Validation accuracy: 0.6873999834060669

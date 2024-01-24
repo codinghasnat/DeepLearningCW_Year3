@@ -1,0 +1,95 @@
+Not max pooling after each one.
+
+model = Sequential()
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(Conv2D(128, (3, 3), activation='relu'))
+# Comment out or remove the problematic max-pooling layer
+# model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+/Users/hasnatchowdhury/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/optimizers/legacy/rmsprop.py:143: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Epoch 1/20
+1563/1563 [==============================] - 32s 19ms/step - loss: 1.8459 - accuracy: 0.3224
+Epoch 2/20
+1563/1563 [==============================] - 33s 21ms/step - loss: 1.5297 - accuracy: 0.4425
+Epoch 3/20
+1563/1563 [==============================] - 30s 19ms/step - loss: 1.3833 - accuracy: 0.5003
+Epoch 4/20
+1563/1563 [==============================] - 38s 24ms/step - loss: 1.2892 - accuracy: 0.5396
+Epoch 5/20
+1563/1563 [==============================] - 34s 22ms/step - loss: 1.2143 - accuracy: 0.5688
+Epoch 6/20
+1563/1563 [==============================] - 30s 19ms/step - loss: 1.1503 - accuracy: 0.5926
+Epoch 7/20
+1563/1563 [==============================] - 35s 22ms/step - loss: 1.0975 - accuracy: 0.6134
+Epoch 8/20
+1563/1563 [==============================] - 30s 19ms/step - loss: 1.0494 - accuracy: 0.6318
+Epoch 9/20
+1563/1563 [==============================] - 38s 25ms/step - loss: 1.0081 - accuracy: 0.6474
+Epoch 10/20
+1563/1563 [==============================] - 35s 22ms/step - loss: 0.9655 - accuracy: 0.6631
+Epoch 11/20
+1563/1563 [==============================] - 34s 22ms/step - loss: 0.9284 - accuracy: 0.6752
+Epoch 12/20
+1563/1563 [==============================] - 32s 20ms/step - loss: 0.8897 - accuracy: 0.6885
+Epoch 13/20
+1563/1563 [==============================] - 34s 22ms/step - loss: 0.8589 - accuracy: 0.6999
+Epoch 14/20
+1563/1563 [==============================] - 31s 20ms/step - loss: 0.8251 - accuracy: 0.7124
+Epoch 15/20
+1563/1563 [==============================] - 34s 22ms/step - loss: 0.7947 - accuracy: 0.7237
+Epoch 16/20
+1563/1563 [==============================] - 33s 21ms/step - loss: 0.7624 - accuracy: 0.7353
+Epoch 17/20
+1563/1563 [==============================] - 31s 20ms/step - loss: 0.7343 - accuracy: 0.7440
+Epoch 18/20
+1563/1563 [==============================] - 32s 21ms/step - loss: 0.7086 - accuracy: 0.7539
+Epoch 19/20
+1563/1563 [==============================] - 32s 21ms/step - loss: 0.6850 - accuracy: 0.7623
+Epoch 20/20
+1563/1563 [==============================] - 32s 21ms/step - loss: 0.6626 - accuracy: 0.7681
+Validation loss: 0.9245101809501648
+Validation accuracy: 0.6869999766349792
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_10 (Conv2D)          (None, 30, 30, 32)        896       
+                                                                 
+ max_pooling2d_6 (MaxPooling  (None, 15, 15, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_11 (Conv2D)          (None, 13, 13, 64)        18496     
+                                                                 
+ conv2d_12 (Conv2D)          (None, 11, 11, 64)        36928     
+                                                                 
+ max_pooling2d_7 (MaxPooling  (None, 5, 5, 64)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_13 (Conv2D)          (None, 3, 3, 128)         73856     
+                                                                 
+ conv2d_14 (Conv2D)          (None, 1, 1, 128)         147584    
+                                                                 
+ flatten (Flatten)           (None, 128)               0         
+                                                                 
+ dense (Dense)               (None, 128)               16512     
+                                                                 
+ dense_1 (Dense)             (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 295,562
+Trainable params: 295,562
+Non-trainable params: 0
+_________________________________________________________________

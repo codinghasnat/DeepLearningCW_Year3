@@ -1,0 +1,275 @@
+Uses larger convolutional filters in the inital layers followed by max pooling to reduce spatial dimensions.
+
+model = Sequential()
+ #First layer: 2D Convolutional later with 32 filters of size 3x3. 3 Colour Channels RGB.
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+ #After each convolutional layer, there is a max-pooling layer with pool size 2x2. Reduces spatial dimensions and helps capture the most important features.
+model.add(MaxPooling2D((2, 2)))
+ #Second layer: 2D Convolutional later with 64 filters of size 3x3. 3 Colour Channels RGB.
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten()) #Transforms to a 1D Layer
+model.add(Dense(128, activation='relu')) #A fully connected layer with 128 neurons and ReLU activation. 
+model.add(Dense(10, activation='softmax')) #Ten different outputs.
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Epoch 1/20
+1563/1563 [==============================] - 22s 14ms/step - loss: 1.8915 - accuracy: 0.3183
+Epoch 2/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.5734 - accuracy: 0.4357
+Epoch 3/20
+1563/1563 [==============================] - 20s 13ms/step - loss: 1.4352 - accuracy: 0.4885
+Epoch 4/20
+1563/1563 [==============================] - 23s 14ms/step - loss: 1.3480 - accuracy: 0.5220
+Epoch 5/20
+1563/1563 [==============================] - 21s 14ms/step - loss: 1.2827 - accuracy: 0.5487
+Epoch 6/20
+1563/1563 [==============================] - 21s 14ms/step - loss: 1.2287 - accuracy: 0.5706
+Epoch 7/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.1839 - accuracy: 0.5856
+Epoch 8/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.1417 - accuracy: 0.6006
+Epoch 9/20
+1563/1563 [==============================] - 22s 14ms/step - loss: 1.1065 - accuracy: 0.6152
+Epoch 10/20
+1563/1563 [==============================] - 20s 13ms/step - loss: 1.0753 - accuracy: 0.6279
+Epoch 11/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.0474 - accuracy: 0.6364
+Epoch 12/20
+1563/1563 [==============================] - 21s 14ms/step - loss: 1.0186 - accuracy: 0.6464
+Epoch 13/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.9909 - accuracy: 0.6566
+Epoch 14/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.9669 - accuracy: 0.6650
+Epoch 15/20
+1563/1563 [==============================] - 26s 16ms/step - loss: 0.9445 - accuracy: 0.6710
+Epoch 16/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 0.9223 - accuracy: 0.6814
+Epoch 17/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 0.9018 - accuracy: 0.6880
+Epoch 18/20
+1563/1563 [==============================] - 24s 16ms/step - loss: 0.8813 - accuracy: 0.6949
+Epoch 19/20
+1563/1563 [==============================] - 23s 14ms/step - loss: 0.8609 - accuracy: 0.7051
+Epoch 20/20
+1563/1563 [==============================] - 21s 13ms/step - loss: 0.8440 - accuracy: 0.7089
+Validation loss: 0.9748977422714233
+Validation accuracy: 0.6610000133514404
+
+model.summary()
+
+1/1 [==============================] - 0s 271ms/step
+Input size: (100, 100)
+Output size: (98, 98)
+1/1 [==============================] - 0s 35ms/step
+Input size: (100, 100)
+Output size: (100, 100)
+1/1 [==============================] - 0s 31ms/step
+Input size: (100, 100)
+Output size: (50, 50)
+1/1 [==============================] - 0s 36ms/step
+Input size: (100, 100, 3)
+Output size: (50, 50, 32)
+1/1 [==============================] - 0s 37ms/step
+1/1 [==============================] - 0s 41ms/step
+Output Network without activation function
+[[[[-0.1889202 ]
+   [-0.00109138]
+   [ 0.11210141]]
+
+  [[ 0.22892433]
+   [ 0.06669015]
+   [-0.01951898]]
+
+  [[ 0.28595904]
+   [ 0.02371773]
+   [-0.25665793]]]]
+
+Output Network after ReLU activation function
+[[[[0.        ]
+   [0.        ]
+   [0.11210141]]
+
+  [[0.22892433]
+   [0.06669015]
+   [0.        ]]
+
+  [[0.28595904]
+   [0.02371773]
+   [0.        ]]]]
+1/1 [==============================] - 0s 37ms/step
+Input size: (100, 100, 3)
+Output size: (50, 50, 32)
+Image shape: (28, 28, 1)
+Total number of training samples: 60000
+Total number of validation samples: 10000
+Model: "sequential_6"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_5 (Conv2D)           (None, 28, 28, 16)        160       
+                                                                 
+ activation_2 (Activation)   (None, 28, 28, 16)        0         
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 14, 14, 16)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 14, 14, 16)        2320      
+                                                                 
+ activation_3 (Activation)   (None, 14, 14, 16)        0         
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 7, 7, 16)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 784)               0         
+                                                                 
+ dense (Dense)               (None, 10)                7850      
+                                                                 
+ activation_4 (Activation)   (None, 10)                0         
+                                                                 
+=================================================================
+Total params: 10,330
+Trainable params: 10,330
+Non-trainable params: 0
+_________________________________________________________________
+/Users/hasnatchowdhury/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/optimizers/legacy/rmsprop.py:143: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+/Users/hasnatchowdhury/Documents/Year 3/Deep Learning/Deep Learning CW/02_CNN_Introduction.ipynb Cell 27 line 8
+      2 opt = RMSprop(lr=0.0001, decay=1e-6)
+      4 model.compile(loss='categorical_crossentropy',
+      5               optimizer=opt,
+      6               metrics=['accuracy'])
+----> 8 model.fit(x_train, y_train_class, batch_size=32, epochs=10,  verbose=0)
+     10 score = model.evaluate(x_test, y_test_class, verbose=0)
+     11 print('Validation loss:', score[0])
+
+File ~/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/utils/traceback_utils.py:65, in filter_traceback.<locals>.error_handler(*args, **kwargs)
+     63 filtered_tb = None
+     64 try:
+---> 65     return fn(*args, **kwargs)
+     66 except Exception as e:
+     67     filtered_tb = _process_traceback_frames(e.__traceback__)
+
+File ~/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/engine/training.py:1685, in Model.fit(self, x, y, batch_size, epochs, verbose, callbacks, validation_split, validation_data, shuffle, class_weight, sample_weight, initial_epoch, steps_per_epoch, validation_steps, validation_batch_size, validation_freq, max_queue_size, workers, use_multiprocessing)
+   1677 with tf.profiler.experimental.Trace(
+   1678     "train",
+   1679     epoch_num=epoch,
+   (...)
+   1682     _r=1,
+   1683 ):
+...
+     53                                       inputs, attrs, num_outputs)
+     54 except core._NotOkStatusException as e:
+     55   if name is not None:
+
+KeyboardInterrupt: 
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+2024-01-17 19:20:41.554115: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Downloading data from https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+170498071/170498071 [==============================] - 59s 0us/step
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+
+New X_train shape: (50000, 3072)
+New Y_train shape: (50000, 10)
+Epoch 1/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 2.0479 - accuracy: 0.2362
+Epoch 2/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.7793 - accuracy: 0.3563
+Epoch 3/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.6936 - accuracy: 0.3909
+Epoch 4/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.6421 - accuracy: 0.4085
+Epoch 5/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.5967 - accuracy: 0.4245
+Epoch 6/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.5629 - accuracy: 0.4399
+Epoch 7/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.5393 - accuracy: 0.4471
+Epoch 8/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.5119 - accuracy: 0.4595
+Epoch 9/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.4797 - accuracy: 0.4699
+Epoch 10/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.4686 - accuracy: 0.4746
+Epoch 11/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.4503 - accuracy: 0.4822
+Epoch 12/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.4237 - accuracy: 0.4901
+Epoch 13/20
+...
+Epoch 20/20
+1563/1563 [==============================] - 6s 4ms/step - loss: 1.3162 - accuracy: 0.5254
+Validation loss: 1.4244304895401
+Validation accuracy: 0.4925999939441681
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Epoch 1/20
+1563/1563 [==============================] - 22s 14ms/step - loss: 1.8915 - accuracy: 0.3183
+Epoch 2/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.5734 - accuracy: 0.4357
+Epoch 3/20
+1563/1563 [==============================] - 20s 13ms/step - loss: 1.4352 - accuracy: 0.4885
+Epoch 4/20
+1563/1563 [==============================] - 23s 14ms/step - loss: 1.3480 - accuracy: 0.5220
+Epoch 5/20
+1563/1563 [==============================] - 21s 14ms/step - loss: 1.2827 - accuracy: 0.5487
+Epoch 6/20
+1563/1563 [==============================] - 21s 14ms/step - loss: 1.2287 - accuracy: 0.5706
+Epoch 7/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.1839 - accuracy: 0.5856
+Epoch 8/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.1417 - accuracy: 0.6006
+Epoch 9/20
+1563/1563 [==============================] - 22s 14ms/step - loss: 1.1065 - accuracy: 0.6152
+Epoch 10/20
+1563/1563 [==============================] - 20s 13ms/step - loss: 1.0753 - accuracy: 0.6279
+Epoch 11/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.0474 - accuracy: 0.6364
+...
+Epoch 20/20
+1563/1563 [==============================] - 21s 13ms/step - loss: 0.8440 - accuracy: 0.7089
+Validation loss: 0.9748977422714233
+Validation accuracy: 0.6610000133514404
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+Model: "sequential_7"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_7 (Conv2D)           (None, 30, 30, 32)        896       
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 15, 15, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_8 (Conv2D)           (None, 13, 13, 64)        18496     
+                                                                 
+ max_pooling2d_4 (MaxPooling  (None, 6, 6, 64)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_9 (Conv2D)           (None, 4, 4, 128)         73856     
+                                                                 
+ max_pooling2d_5 (MaxPooling  (None, 2, 2, 128)        0         
+ 2D)                                                             
+                                                                 
+ flatten_1 (Flatten)         (None, 512)               0         
+                                                                 
+ dense_1 (Dense)             (None, 128)               65664     
+                                                                 
+ dense_2 (Dense)             (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 160,202
+Trainable params: 160,202
+Non-trainable params: 0

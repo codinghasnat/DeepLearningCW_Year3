@@ -1,0 +1,84 @@
+
+#.....
+model = Sequential()
+# Convolutional Layer
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+
+# Optional: MaxPooling Layer
+model.add(MaxPooling2D((2, 2)))
+
+# Flatten Layer
+model.add(Flatten())
+
+# Dense Layer
+model.add(Dense(128, activation='relu'))
+
+# Output Layer
+model.add(Dense(10, activation='softmax'))
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Epoch 1/20
+1563/1563 [==============================] - 14s 8ms/step - loss: 1.7555 - accuracy: 0.3852
+Epoch 2/20
+1563/1563 [==============================] - 14s 9ms/step - loss: 1.4551 - accuracy: 0.4942
+Epoch 3/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 1.3190 - accuracy: 0.5423
+Epoch 4/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 1.2364 - accuracy: 0.5719
+Epoch 5/20
+1563/1563 [==============================] - 13s 8ms/step - loss: 1.1743 - accuracy: 0.5950
+Epoch 6/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 1.1246 - accuracy: 0.6130
+Epoch 7/20
+1563/1563 [==============================] - 15s 10ms/step - loss: 1.0808 - accuracy: 0.6297
+Epoch 8/20
+1563/1563 [==============================] - 13s 8ms/step - loss: 1.0431 - accuracy: 0.6428
+Epoch 9/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 1.0101 - accuracy: 0.6549
+Epoch 10/20
+1563/1563 [==============================] - 13s 9ms/step - loss: 0.9795 - accuracy: 0.6653
+Epoch 11/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.9535 - accuracy: 0.6753
+Epoch 12/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.9281 - accuracy: 0.6837
+Epoch 13/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.9046 - accuracy: 0.6921
+Epoch 14/20
+1563/1563 [==============================] - 13s 8ms/step - loss: 0.8846 - accuracy: 0.7003
+Epoch 15/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.8615 - accuracy: 0.7072
+Epoch 16/20
+1563/1563 [==============================] - 13s 8ms/step - loss: 0.8435 - accuracy: 0.7126
+Epoch 17/20
+1563/1563 [==============================] - 11s 7ms/step - loss: 0.8245 - accuracy: 0.7185
+Epoch 18/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.8080 - accuracy: 0.7253
+Epoch 19/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.7894 - accuracy: 0.7324
+Epoch 20/20
+1563/1563 [==============================] - 12s 8ms/step - loss: 0.7735 - accuracy: 0.7377
+Validation loss: 1.0085334777832031
+Validation accuracy: 0.6572999954223633
+Time Elapsed: 253.73273992538452
+Model: "sequential_13"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_35 (Conv2D)          (None, 30, 30, 32)        896       
+                                                                 
+ max_pooling2d_26 (MaxPoolin  (None, 15, 15, 32)       0         
+ g2D)                                                            
+                                                                 
+ flatten_7 (Flatten)         (None, 7200)              0         
+                                                                 
+ dense_14 (Dense)            (None, 128)               921728    
+                                                                 
+ dense_15 (Dense)            (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 923,914
+Trainable params: 923,914
+Non-trainable params: 0
+_________________________________________________________________

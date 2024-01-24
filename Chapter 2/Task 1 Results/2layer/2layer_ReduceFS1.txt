@@ -1,0 +1,86 @@
+model = Sequential()
+model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2,2)))
+model.add(Conv2D(64, (5, 5), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Train on 50000 samples
+2024-01-22 20:03:17.613059: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:353] MLIR V1 optimization pass is not enabled
+2024-01-22 20:03:17.803868: W tensorflow/c/c_api.cc:300] Operation '{name:'training/RMSprop/learning_rate/Assign' id:263 op device:{requested: '', assigned: ''} def:{{{node training/RMSprop/learning_rate/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](training/RMSprop/learning_rate, training/RMSprop/learning_rate/Initializer/initial_value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Epoch 1/20
+50000/50000 [==============================] - 44s 887us/sample - loss: 1.7171 - accuracy: 0.3832
+Epoch 2/20
+50000/50000 [==============================] - 54s 1ms/sample - loss: 1.4045 - accuracy: 0.5005
+Epoch 3/20
+50000/50000 [==============================] - 43s 858us/sample - loss: 1.2778 - accuracy: 0.5481
+Epoch 4/20
+50000/50000 [==============================] - 42s 838us/sample - loss: 1.1898 - accuracy: 0.5817
+Epoch 5/20
+50000/50000 [==============================] - 43s 856us/sample - loss: 1.1206 - accuracy: 0.6100
+Epoch 6/20
+50000/50000 [==============================] - 42s 830us/sample - loss: 1.0632 - accuracy: 0.6292
+Epoch 7/20
+50000/50000 [==============================] - 53s 1ms/sample - loss: 1.0126 - accuracy: 0.6459
+Epoch 8/20
+50000/50000 [==============================] - 43s 862us/sample - loss: 0.9725 - accuracy: 0.6627
+Epoch 9/20
+50000/50000 [==============================] - 42s 847us/sample - loss: 0.9345 - accuracy: 0.6757
+Epoch 10/20
+50000/50000 [==============================] - 45s 905us/sample - loss: 0.9012 - accuracy: 0.6881
+Epoch 11/20
+50000/50000 [==============================] - 52s 1ms/sample - loss: 0.8692 - accuracy: 0.7009
+Epoch 12/20
+50000/50000 [==============================] - 46s 917us/sample - loss: 0.8415 - accuracy: 0.7115
+Epoch 13/20
+50000/50000 [==============================] - 43s 869us/sample - loss: 0.8151 - accuracy: 0.7188
+Epoch 14/20
+50000/50000 [==============================] - 43s 853us/sample - loss: 0.7888 - accuracy: 0.7290
+Epoch 15/20
+50000/50000 [==============================] - 42s 833us/sample - loss: 0.7645 - accuracy: 0.7372
+Epoch 16/20
+50000/50000 [==============================] - 44s 882us/sample - loss: 0.7396 - accuracy: 0.7443
+Epoch 17/20
+50000/50000 [==============================] - 42s 839us/sample - loss: 0.7179 - accuracy: 0.7541
+Epoch 18/20
+50000/50000 [==============================] - 44s 874us/sample - loss: 0.6966 - accuracy: 0.7607
+Epoch 19/20
+50000/50000 [==============================] - 54s 1ms/sample - loss: 0.6753 - accuracy: 0.7694
+Epoch 20/20
+50000/50000 [==============================] - 45s 900us/sample - loss: 0.6547 - accuracy: 0.7755
+/Users/hasnatchowdhury/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/engine/training_v1.py:2335: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates = self.state_updates
+2024-01-22 20:18:22.935826: W tensorflow/c/c_api.cc:300] Operation '{name:'loss/mul' id:178 op device:{requested: '', assigned: ''} def:{{{node loss/mul}} = Mul[T=DT_FLOAT, _has_manual_control_dependencies=true](loss/mul/x, loss/dense_81_loss/value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Validation loss: 0.879885111618042
+Validation accuracy: 0.7027
+Time Elapsed: 911.3303968906403
+Model: "sequential_45"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_83 (Conv2D)          (None, 30, 30, 64)        1792      
+                                                                 
+ max_pooling2d_74 (MaxPoolin  (None, 15, 15, 64)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_84 (Conv2D)          (None, 11, 11, 64)        102464    
+                                                                 
+ max_pooling2d_75 (MaxPoolin  (None, 5, 5, 64)         0         
+ g2D)                                                            
+                                                                 
+ flatten_39 (Flatten)        (None, 1600)              0         
+                                                                 
+ dense_80 (Dense)            (None, 256)               409856    
+                                                                 
+ dense_81 (Dense)            (None, 10)                2570      
+                                                                 
+=================================================================
+Total params: 516,682
+Trainable params: 516,682
+Non-trainable params: 0
+_________________________________________________________________

@@ -1,0 +1,79 @@
+model = Sequential()
+model.add(Conv2D(64, (5, 5), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2,2)))
+model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Epoch 1/20
+1563/1563 [==============================] - 34s 21ms/step - loss: 1.6964 - accuracy: 0.3960
+Epoch 2/20
+1563/1563 [==============================] - 36s 23ms/step - loss: 1.3887 - accuracy: 0.5075
+Epoch 3/20
+1563/1563 [==============================] - 35s 22ms/step - loss: 1.2720 - accuracy: 0.5527
+Epoch 4/20
+1563/1563 [==============================] - 36s 23ms/step - loss: 1.1818 - accuracy: 0.5880
+Epoch 5/20
+1563/1563 [==============================] - 34s 22ms/step - loss: 1.1096 - accuracy: 0.6123
+Epoch 6/20
+1563/1563 [==============================] - 44s 28ms/step - loss: 1.0498 - accuracy: 0.6334
+Epoch 7/20
+1563/1563 [==============================] - 38s 24ms/step - loss: 1.0017 - accuracy: 0.6543
+Epoch 8/20
+1563/1563 [==============================] - 38s 24ms/step - loss: 0.9576 - accuracy: 0.6685
+Epoch 9/20
+1563/1563 [==============================] - 40s 26ms/step - loss: 0.9191 - accuracy: 0.6846
+Epoch 10/20
+1563/1563 [==============================] - 37s 23ms/step - loss: 0.8791 - accuracy: 0.6980
+Epoch 11/20
+1563/1563 [==============================] - 39s 25ms/step - loss: 0.8471 - accuracy: 0.7085
+Epoch 12/20
+1563/1563 [==============================] - 37s 23ms/step - loss: 0.8152 - accuracy: 0.7190
+Epoch 13/20
+1563/1563 [==============================] - 33s 21ms/step - loss: 0.7847 - accuracy: 0.7297
+Epoch 14/20
+1563/1563 [==============================] - 34s 22ms/step - loss: 0.7555 - accuracy: 0.7405
+Epoch 15/20
+1563/1563 [==============================] - 31s 20ms/step - loss: 0.7266 - accuracy: 0.7523
+Epoch 16/20
+1563/1563 [==============================] - 31s 20ms/step - loss: 0.6997 - accuracy: 0.7588
+Epoch 17/20
+1563/1563 [==============================] - 30s 19ms/step - loss: 0.6726 - accuracy: 0.7698
+Epoch 18/20
+1563/1563 [==============================] - 47s 30ms/step - loss: 0.6458 - accuracy: 0.7787
+Epoch 19/20
+1563/1563 [==============================] - 38s 24ms/step - loss: 0.6209 - accuracy: 0.7880
+Epoch 20/20
+1563/1563 [==============================] - 31s 20ms/step - loss: 0.5969 - accuracy: 0.7961
+Validation loss: 0.9547209143638611
+Validation accuracy: 0.6879000067710876
+Time Elapsed: 726.964448928833
+Model: "sequential_34"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_61 (Conv2D)          (None, 28, 28, 64)        4864      
+                                                                 
+ max_pooling2d_52 (MaxPoolin  (None, 14, 14, 64)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_62 (Conv2D)          (None, 12, 12, 64)        36928     
+                                                                 
+ max_pooling2d_53 (MaxPoolin  (None, 6, 6, 64)         0         
+ g2D)                                                            
+                                                                 
+ flatten_28 (Flatten)        (None, 2304)              0         
+                                                                 
+ dense_58 (Dense)            (None, 256)               590080    
+                                                                 
+ dense_59 (Dense)            (None, 10)                2570      
+                                                                 
+=================================================================
+Total params: 634,442
+Trainable params: 634,442
+Non-trainable params: 0
+_________________________________________________________________

@@ -1,0 +1,87 @@
+#.....
+model = Sequential()
+# Convolutional Layer
+model.add(Conv2D(64, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+
+# Optional: MaxPooling Layer
+model.add(MaxPooling2D((2, 2)))
+
+# Flatten Layer
+model.add(Flatten())
+
+# Dense Layer
+model.add(Dense(128, activation='relu'))
+
+# Output Layer
+model.add(Dense(10, activation='softmax'))
+
+#.....
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+/Users/hasnatchowdhury/opt/anaconda3/envs/machineLearning/lib/python3.10/site-packages/keras/optimizers/legacy/rmsprop.py:143: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Epoch 1/20
+1563/1563 [==============================] - 31s 19ms/step - loss: 1.7001 - accuracy: 0.4001
+Epoch 2/20
+1563/1563 [==============================] - 30s 19ms/step - loss: 1.3892 - accuracy: 0.5159
+Epoch 3/20
+1563/1563 [==============================] - 18s 12ms/step - loss: 1.2617 - accuracy: 0.5618
+Epoch 4/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.1827 - accuracy: 0.5907
+Epoch 5/20
+1563/1563 [==============================] - 24s 15ms/step - loss: 1.1226 - accuracy: 0.6120
+Epoch 6/20
+1563/1563 [==============================] - 21s 13ms/step - loss: 1.0743 - accuracy: 0.6306
+Epoch 7/20
+1563/1563 [==============================] - 23s 15ms/step - loss: 1.0329 - accuracy: 0.6451
+Epoch 8/20
+1563/1563 [==============================] - 21s 13ms/step - loss: 0.9954 - accuracy: 0.6595
+Epoch 9/20
+1563/1563 [==============================] - 20s 13ms/step - loss: 0.9622 - accuracy: 0.6676
+Epoch 10/20
+1563/1563 [==============================] - 20s 13ms/step - loss: 0.9329 - accuracy: 0.6793
+Epoch 11/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.9044 - accuracy: 0.6896
+Epoch 12/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.8793 - accuracy: 0.6974
+Epoch 13/20
+1563/1563 [==============================] - 22s 14ms/step - loss: 0.8556 - accuracy: 0.7058
+Epoch 14/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.8319 - accuracy: 0.7149
+Epoch 15/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.8101 - accuracy: 0.7236
+Epoch 16/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.7888 - accuracy: 0.7305
+Epoch 17/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.7680 - accuracy: 0.7391
+Epoch 18/20
+1563/1563 [==============================] - 19s 12ms/step - loss: 0.7476 - accuracy: 0.7463
+Epoch 19/20
+1563/1563 [==============================] - 21s 13ms/step - loss: 0.7289 - accuracy: 0.7540
+Epoch 20/20
+1563/1563 [==============================] - 24s 15ms/step - loss: 0.7091 - accuracy: 0.7601
+Validation loss: 0.9585102796554565
+Validation accuracy: 0.6689000129699707
+Time Elapsed: 435.20310401916504
+Model: "sequential_8"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_30 (Conv2D)          (None, 30, 30, 64)        1792      
+                                                                 
+ max_pooling2d_21 (MaxPoolin  (None, 15, 15, 64)       0         
+ g2D)                                                            
+                                                                 
+ flatten_2 (Flatten)         (None, 14400)             0         
+                                                                 
+ dense_4 (Dense)             (None, 128)               1843328   
+                                                                 
+ dense_5 (Dense)             (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 1,846,410
+Trainable params: 1,846,410
+Non-trainable params: 0
+_________________________________________________________________

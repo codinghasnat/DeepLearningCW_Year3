@@ -1,0 +1,83 @@
+model = Sequential()
+model.add(Conv2D(128, (5, 5), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2,2)))
+model.add(Conv2D(128, (5, 5), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Train on 50000 samples
+2024-01-22 23:06:20.572974: W tensorflow/c/c_api.cc:300] Operation '{name:'training_16/RMSprop/dense_96/kernel/rms/Assign' id:4368 op device:{requested: '', assigned: ''} def:{{{node training_16/RMSprop/dense_96/kernel/rms/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](training_16/RMSprop/dense_96/kernel/rms, training_16/RMSprop/dense_96/kernel/rms/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Epoch 1/20
+50000/50000 [==============================] - 129s 3ms/sample - loss: 1.6278 - accuracy: 0.4141
+Epoch 2/20
+50000/50000 [==============================] - 127s 3ms/sample - loss: 1.2921 - accuracy: 0.5422
+Epoch 3/20
+50000/50000 [==============================] - 127s 3ms/sample - loss: 1.1325 - accuracy: 0.6052
+Epoch 4/20
+50000/50000 [==============================] - 127s 3ms/sample - loss: 1.0283 - accuracy: 0.6448
+Epoch 5/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.9453 - accuracy: 0.6737
+Epoch 6/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.8764 - accuracy: 0.6974
+Epoch 7/20
+50000/50000 [==============================] - 135s 3ms/sample - loss: 0.8204 - accuracy: 0.7165
+Epoch 8/20
+50000/50000 [==============================] - 130s 3ms/sample - loss: 0.7671 - accuracy: 0.7361
+Epoch 9/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.7203 - accuracy: 0.7515
+Epoch 10/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.6766 - accuracy: 0.7687
+Epoch 11/20
+50000/50000 [==============================] - 129s 3ms/sample - loss: 0.6327 - accuracy: 0.7832
+Epoch 12/20
+50000/50000 [==============================] - 130s 3ms/sample - loss: 0.5956 - accuracy: 0.7974
+Epoch 13/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.5593 - accuracy: 0.8107
+Epoch 14/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.5204 - accuracy: 0.8222
+Epoch 15/20
+50000/50000 [==============================] - 128s 3ms/sample - loss: 0.4862 - accuracy: 0.8367
+Epoch 16/20
+50000/50000 [==============================] - 139s 3ms/sample - loss: 0.4531 - accuracy: 0.8460
+Epoch 17/20
+50000/50000 [==============================] - 127s 3ms/sample - loss: 0.4197 - accuracy: 0.8584
+Epoch 18/20
+50000/50000 [==============================] - 126s 3ms/sample - loss: 0.3888 - accuracy: 0.8696
+Epoch 19/20
+50000/50000 [==============================] - 127s 3ms/sample - loss: 0.3589 - accuracy: 0.8801
+Epoch 20/20
+50000/50000 [==============================] - 126s 3ms/sample - loss: 0.3287 - accuracy: 0.8913
+2024-01-22 23:49:16.292913: W tensorflow/c/c_api.cc:300] Operation '{name:'loss_8/mul' id:4244 op device:{requested: '', assigned: ''} def:{{{node loss_8/mul}} = Mul[T=DT_FLOAT, _has_manual_control_dependencies=true](loss_8/mul/x, loss_8/dense_97_loss/value)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Validation loss: 0.9119236729621887
+Validation accuracy: 0.7232
+Time Elapsed: 2584.6266717910767
+Model: "sequential_53"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_99 (Conv2D)          (None, 28, 28, 128)       9728      
+                                                                 
+ max_pooling2d_90 (MaxPoolin  (None, 14, 14, 128)      0         
+ g2D)                                                            
+                                                                 
+ conv2d_100 (Conv2D)         (None, 10, 10, 128)       409728    
+                                                                 
+ max_pooling2d_91 (MaxPoolin  (None, 5, 5, 128)        0         
+ g2D)                                                            
+                                                                 
+ flatten_47 (Flatten)        (None, 3200)              0         
+                                                                 
+ dense_96 (Dense)            (None, 256)               819456    
+                                                                 
+ dense_97 (Dense)            (None, 10)                2570      
+                                                                 
+=================================================================
+Total params: 1,241,482
+Trainable params: 1,241,482
+Non-trainable params: 0
+_________________________________________________________________

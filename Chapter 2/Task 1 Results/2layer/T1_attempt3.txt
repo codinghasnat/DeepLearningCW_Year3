@@ -1,0 +1,108 @@
+256 neurons in the dense layer
+
+model = Sequential()
+model.add(Conv2D(64, (5, 5), activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(128, (5, 5), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+
+Image shape: (32, 32, 3)
+Total number of training samples: 50000
+Total number of validation samples: 10000
+Epoch 1/20
+1563/1563 [==============================] - 71s 45ms/step - loss: 1.6638 - accuracy: 0.4045
+Epoch 2/20
+1563/1563 [==============================] - 69s 44ms/step - loss: 1.3511 - accuracy: 0.5228
+Epoch 3/20
+1563/1563 [==============================] - 63s 40ms/step - loss: 1.2016 - accuracy: 0.5801
+Epoch 4/20
+1563/1563 [==============================] - 65s 42ms/step - loss: 1.0971 - accuracy: 0.6193
+Epoch 5/20
+1563/1563 [==============================] - 62s 40ms/step - loss: 1.0150 - accuracy: 0.6488
+Epoch 6/20
+1563/1563 [==============================] - 64s 41ms/step - loss: 0.9535 - accuracy: 0.6720
+Epoch 7/20
+1563/1563 [==============================] - 66s 43ms/step - loss: 0.8943 - accuracy: 0.6924
+Epoch 8/20
+1563/1563 [==============================] - 76s 49ms/step - loss: 0.8452 - accuracy: 0.7110
+Epoch 9/20
+1563/1563 [==============================] - 69s 44ms/step - loss: 0.8007 - accuracy: 0.7262
+Epoch 10/20
+1563/1563 [==============================] - 62s 39ms/step - loss: 0.7582 - accuracy: 0.7432
+Epoch 11/20
+1563/1563 [==============================] - 62s 40ms/step - loss: 0.7181 - accuracy: 0.7533
+Epoch 12/20
+1563/1563 [==============================] - 62s 40ms/step - loss: 0.6824 - accuracy: 0.7663
+Epoch 13/20
+1563/1563 [==============================] - 62s 39ms/step - loss: 0.6443 - accuracy: 0.7790
+Epoch 14/20
+1563/1563 [==============================] - 70s 45ms/step - loss: 0.6110 - accuracy: 0.7926
+Epoch 15/20
+1563/1563 [==============================] - 65s 41ms/step - loss: 0.5778 - accuracy: 0.8029
+Epoch 16/20
+1563/1563 [==============================] - 63s 40ms/step - loss: 0.5451 - accuracy: 0.8138
+Epoch 17/20
+1563/1563 [==============================] - 62s 39ms/step - loss: 0.5130 - accuracy: 0.8255
+Epoch 18/20
+1563/1563 [==============================] - 64s 41ms/step - loss: 0.4835 - accuracy: 0.8363
+Epoch 19/20
+1563/1563 [==============================] - 65s 42ms/step - loss: 0.4547 - accuracy: 0.8471
+Epoch 20/20
+1563/1563 [==============================] - 62s 39ms/step - loss: 0.4272 - accuracy: 0.8571
+Validation loss: 0.8711925745010376
+Validation accuracy: 0.7294999957084656
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_15 (Conv2D)          (None, 28, 28, 64)        4864      
+                                                                 
+ max_pooling2d_8 (MaxPooling  (None, 14, 14, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_16 (Conv2D)          (None, 10, 10, 128)       204928    
+                                                                 
+ max_pooling2d_9 (MaxPooling  (None, 5, 5, 128)        0         
+ 2D)                                                             
+                                                                 
+ flatten_1 (Flatten)         (None, 3200)              0         
+                                                                 
+ dense_2 (Dense)             (None, 256)               819456    
+                                                                 
+ dense_3 (Dense)             (None, 10)                2570      
+                                                                 
+=================================================================
+Total params: 1,031,818
+Trainable params: 1,031,818
+Non-trainable params: 0
+_________________________________________________________________
+
+
+
+Epoch 1: Training Accuracy = 0.4075, Validation Accuracy = 0.4816
+Epoch 2: Training Accuracy = 0.5291, Validation Accuracy = 0.5416
+Epoch 3: Training Accuracy = 0.5859, Validation Accuracy = 0.6024
+Epoch 4: Training Accuracy = 0.6252, Validation Accuracy = 0.5839
+Epoch 5: Training Accuracy = 0.6533, Validation Accuracy = 0.6039
+Epoch 6: Training Accuracy = 0.6760, Validation Accuracy = 0.6547
+Epoch 7: Training Accuracy = 0.6964, Validation Accuracy = 0.6648
+Epoch 8: Training Accuracy = 0.7124, Validation Accuracy = 0.6721
+Epoch 9: Training Accuracy = 0.7298, Validation Accuracy = 0.6686
+Epoch 10: Training Accuracy = 0.7432, Validation Accuracy = 0.7050
+Epoch 11: Training Accuracy = 0.7581, Validation Accuracy = 0.6938
+Epoch 12: Training Accuracy = 0.7710, Validation Accuracy = 0.7055
+Epoch 13: Training Accuracy = 0.7839, Validation Accuracy = 0.7055
+Epoch 14: Training Accuracy = 0.7947, Validation Accuracy = 0.7182
+Epoch 15: Training Accuracy = 0.8081, Validation Accuracy = 0.7220
+Epoch 16: Training Accuracy = 0.8174, Validation Accuracy = 0.7201
+Epoch 17: Training Accuracy = 0.8283, Validation Accuracy = 0.7170
+Epoch 18: Training Accuracy = 0.8396, Validation Accuracy = 0.7224
+Epoch 19: Training Accuracy = 0.8492, Validation Accuracy = 0.7368
+Epoch 20: Training Accuracy = 0.8588, Validation Accuracy = 0.7092
+Validation accuracy: 0.7589
+Validation loss: 0.9147246224403381
+Validation accuracy: 0.7092
