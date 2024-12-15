@@ -1,0 +1,618 @@
+Title.
+
+here to present you with Rover X unique
+and Innovative the master Rover inspired
+educational toy aims to provide high
+school students with a fun and
+Interactive Learning Experience this
+project was created to address the
+problem of high school students lack of
+Engagement with stem subjects. It's
+common knowledge that these subjects are
+essential for the development of future
+technology engineering and science
+leaders.
+
+Slide 1
+
+The motivation behind the
+project is to create an educational toy
+based on a material that can move
+autonomously through a predefined
+pattern different levels of difficulty
+will be associated with the toy and
+students can purchase different add-ons
+based on the topics or difficulties they
+wish to practice.
+
+Slide 2
+
+The base design of the
+training will be able to
+automatically move following a
+predetermined pattern and the following
+levels of difficulty associated with the
+toy students will be able to control the
+Rover manually through an app. 
+level one
+this level teaches students a
+fundamental of app development and
+programming students at level 2 will be
+able to construct a solar charging
+station for the mass Rover this level
+teaches students the fundamental of
+solar energy and Power Systems finally
+in level 3 the students will be able to
+identify different colors of a tennis
+ball introducing basic concepts in
+computer vision and image processing by
+the end of the project the goal is to
+achieve several objectives.
+
+Objectives: first they project things to create an educational
+toy that is fun interactive and engaging
+for high school students second the
+project brings to inspire to motivate
+students to pursue careers in stem
+fields and finally their project aims to
+introduce students to the basics of
+subjects that are not covered in school
+
+Slide 3
+we are a team of undergraduate
+electrical and electronic engineering
+students who have noticed there's a gap
+in the market before coming to UNI we
+all felt like we had little to low
+exposure with Hands-On projects
+involving Electronics due to a lack of
+opportunities presented to us at school
+as a result there was a big jump from
+school to UNI with a lot of us not
+having experience or knowing what to
+expect we hope that this product can be
+used in various ways a key purpose is to
+be used as an enrichment tool both in
+and outside of school furthermore the
+different levels can be used to Target
+children of different ages and to allow
+them to gradually work their way up the
+levels as they become more confident and
+gradually expand their skill set it will
+also allow them to Target certain skills
+which can then be used to building
+things like the learn to the classroom
+we also believe it's more accessible
+than products in America which have a
+similar idea such as LEGO Mindstorms as
+we were planning to price it lower
+furthermore unlike mind Stones it allows
+for the toy to be tailored for use by a
+certain age or to Target specific skills
+rather than paying a lot in one go to
+have access to a lot of components this
+can often be overwhelming to kids and as
+a result we have taken a more
+incremental approach 
+
+Slide 4
+we hope to launch
+this product in the market by November
+2023. this would allow us to Target
+schools ahead of the new year and
+furthermore it will provide an
+opportunity for individuals to buy the
+product as a gift during the build up to
+Christmas.
+
+Slide 5
+Our Market Size
+investing in our startup is a smart move
+because the educational robot Market is
+growing rapidly according to the
+educational roguebook global market
+report 2023 the market size is expected
+to be 1.72 billion dollars in 2023 with
+a compound annual growth rate of 18.8
+percent this Market is projected 3.37
+billion dollars by 2027. in the UK alone
+the market for educational robot toys
+has already reached over 500 million
+pounds 
+
+Slide 6
+our startup is on a mission to
+capture a share of the educational robot
+toy Market by targeting a specific
+demographic that's been largely
+overlooked by our competitors While most
+of our competitors such as Lego Sphero
+focus on children aged 5 to 12 there's
+still a huge Market gap for secondary
+school students aged 12 to 18. that's
+what our Mars Rover education toy comes
+in it's uniquely positioned to provide
+high school students with an exciting
+and Hands-On way to learn about
+different engineering topics coding and
+space exploration by investing in our
+startup you'll be able to capitalize on
+this growing market and help us Inspire
+and educate the next generation of
+explorers and Engineers don't miss out
+on this opportunity to be a part of
+something special invest in our start
+dub today
+
+Slide 7
+our startup is headquartered in London
+and our starting Market will be in the
+UK we will expand to Spain in 2024 China
+where we manufacture in 2025 and the US
+in 2026.
+
+SLide 8
+our Revenue will primarily come from the
+sales of the base rubber design kit and
+the different add-on projects the
+product can be sold through an online
+storage which can be set up using
+e-commerce platforms such as Shopify or
+Amazon Partnerships will be established
+with secondary schools to provide the
+Mars rover education toy as part of
+their curriculum or extracurricular
+activities Revenue can be generated
+through bulk saves to schools or through
+licensing fees for the use of the
+product in the classroom
+
+Slide 9
+SWOT analysis is a simple powerful tool
+that allows us to identify the strengths
+weaknesses opportunities and threats of
+our project this analysis helps us to
+capitalize on our strengths while
+identifying and mitigating our
+weaknesses our impressive strengths
+include our educational value the Mars
+rubber toy can teach students about
+engineering Robotics and other stem
+subjects the toy is fun and engaging
+which can help to motivate them to learn
+it is also modular allowing children to
+experiment with different add-ons the
+weaknesses we have on our aiming to
+mitigate are our price we understand
+that our product may be considered
+expensive by some customers which limit
+its accessibility to some family our
+visibility our startup brand is not yet
+established in the toy industry there
+are many opportunities for aim to
+benefit from the toikabi market data as
+a tie into educational programs programs
+the success of the Tokyo link to the
+development of additional space themes
+decoration Choice which could broaden
+the appeal of the brand part of doing
+with large organizations such as NASA
+Earth's Basics could help us to increase
+the credibility of the toy and attract
+more customers last we have some threats
+we have some competition there are
+somewhat similar educational toys and
+advances in technology could make the
+March Rover toy less impressive.
+
+Slide 10
+with a clear roadmap a budget for each
+stage of the project the three month
+design stage will cost around 300K
+pounds providing a solid foundation for
+the Mars rover education toy and the
+three months prototype stage will cost
+around 480k and cover materials
+manufacturing and labor for a fully
+functional products ready to be tested
+and brought into the market.
+
+Slide 11
+in design stage we have broken down the course
+into four main categories Personnel
+course material and supplies equipment
+course and legal administrative cost
+Personnel costs will cover the majority
+of the design stage project accounting
+for 81 this investment will allow us to
+hire free experienced Engineers who will
+support and design our product by
+bringing in experts into this field
+we'll be able to ensure that the master
+over educational is designed to the
+highest standards both in terms of
+functionality and educational value as
+we move towards the Prototype stage for
+our Mass Rover education toy we have
+expanded our course breakdown to include
+the critical expenses such as testing
+and validation course to ensure
+reliability documentation costs for
+Clear instructions and Manufacturing
+calls for Productions with these
+expenses covered it will be one step
+closer to providing high school students
+with an exciting and hand-on way to
+learn about robotics coding and space
+exploration through our Mass Rover
+education toy.
+
+Slide 12
+in the development and testing costs we
+have carefully considered all the
+necessary expenses which include fees
+for Prototype design and prototype
+testing and validation we are also
+planning to hire interns at a specialty
+testing agency to assist with the
+testing process which will help us keep
+calls downed without compromising on
+quality and to calculate the cost per
+product we have taken into account
+various factors 
+
+Slide 13
+including material costs
+production course administrative costs
+and distribution costs for example the
+administrative course cover overhead
+expenses such as office rents insurance
+and salaries for admin staff finally
+distribution costs include expenses
+related to shipping and handling 
+
+Slide 14
+as well as marketing and sales calls hence we
+estimate that the total cost per kids is
+approximately 11.58 on average this
+course includes Auto expense necessary
+to deliver high quality projects to our
+customers while still maintaining a
+reasonable profit margin for our company
+after carefully calculating our cost per
+kit 
+
+Slide 15
+we estimate that we can sell each
+masterful education toy for
+approximately 41.75 pounds which results
+in an estimating profits of 30.17 pounds
+per product sold this profit margins
+Takens into account of all our estimated
+costs as well as a reasonable markup to
+ensure that our business remains
+profitable and sustainable over at the
+long term
+
+Slide 16
+channels to identify and address any
+potential design or manufacturing issues
+as soon as possible we also acknowledge
+that the product may not meet Market
+romance but we will conduct thorough
+market research to identify the unique
+needs and preferences of our target
+audience we will develop an effective
+quality control issues may result in a
+product that doesn't mean the quality
+standards for school use we will
+mitigate these by implementing quality
+control measures conduct regular
+inspections to meet all critical product
+specifications and test the product
+thoroughly to ensure that it meet the
+seed standards we'll make necessary
+designer manufacturing changes based on
+the inspection and testing results
+issues in the supply chain or shortages
+of resources may lead to delays in
+manufacturing too we will develop a
+contingency plan for resource allocation
+and collaborate closely with suppliers
+to ensure timely Supply as well as
+having backups we have identified and
+addressed potential resources early
+delays in manufacturing or testing may
+impact the overall project timeline and
+delay the launch of the product we will
+develop a detailed project schedule that
+accounts for potential delays and
+includes contingency plans continuously
+monitor progress against the schedule
+and adjust the schedule and contingency
+plans as necessary we also acknowledge
+that there may there may be unforeseen
+designer Manufacturing issues that may
+cause delays in the schedule do we will
+develop a comprehensive risk marketing
+plan including targeted Outreach
+promotions and ads we will continue to
+monitor Market feedback and adjust as
+necessary
+before commenting with the project we
+will provide a comprehensive deliverable
+
+Slide 17
+plan outlining all our mile stones and
+deliverables throughout the project
+cycle we will start with the initial
+working prototype and mocking up
+preliminary specifications drawing and
+sketches including materials dimensions
+and product production methods this will
+then lead to our complete project plan
+which will include a breakdown of what
+must be achieved and by when our
+technical specs and virtual model will
+help to ensure that the investors have a
+sound understanding of the product
+thorough testing is essential as it is a
+product that's going to be placed on the
+market and we need to ensure that
+there's no electrical hazards or general
+safety hazards Extra Care must be taken
+as it is aimed at children and finally
+validation tests will help ensure the
+product needs its purpose and the
+stakeholders needs it was a breakdown of
+the costs that we incurred during the
+development process 
+
+Slide 18
+
+salaries will need
+to be paid to lead members of the
+startup and hired contractors such as
+the web developers and to employees
+trained to maintain the Machinery to
+help with the general upkeep and ensure
+everything is running speedly alongside
+to manufacturers that are hired to help
+produce our product buildings will be
+needed to be hired such as office space
+and warehouse space and materials and
+Equipment include raw materials needed
+for production the packaging costs
+machinery and equipment hiring factories
+and shipping costs from the factory to
+us as the customer will be paying for
+the cost between us and Them energy and
+utilities will include those using the
+office space and by the Machinery in the
+manufacturing process and alongside
+Transportation costs marketing and
+advertising can be split into two
+subsections including costs associated
+with content creation and with uploading
+advertisements
+
+Slide 19
+Who we are.
+so our startup currently consists of
+five members they will each behind a key
+role as follows so our CEO is Kelvin and
+he is responsible for our business's
+overall direction and makes the major
+corporate decisions and manages our
+overall operations and resources he's
+the main point of communication between
+the company and externals our CEO is me
+Tanya and I'm in charge of day-to-day
+operations and processes in place
+towards businesses businesses overall
+Vision the CFO is Gonzalo and he is
+responsible for the financial health of
+the business he analyzes and reviews
+financial data reports in financial
+performance and carries out the
+budgeting our CMOS Patricia and she's
+responsible for Planning Development and
+implementation of our marketing strategy
+she this includes the market research
+pricing advertising and any
+Communications involved our CTO is
+Christina and she helps lead the tech
+and engineering department and she is
+responsible for developing the tech
+processes following hierarchy for the
+design stage 
+
+Slide 20: Rationale
+Kelvin is our CEO who has
+strong leadership skills vision and the
+ability to make tough decisions in the
+rapidly changing business environment he
+was a co-founder of a company and
+managed to get funding from is Andrew
+investors and successfully allows his
+startup so we decided that Kelvin is the
+right person to lead our team then we
+have the rest of our management board
+with Tanya Bean chief operation officer
+Tanya understands the company's
+operations and can effectively manage
+their organization's day-to-day
+functions she has strategic thinking and
+great problem solving skills she
+developed all of these skills while
+while taking a position of eso president
+she manages the administrative team
+which consists of office manager and
+executive assistant
+Gonzalo is our Chief Financial Officer
+who can effectively manage the financial
+affairs of our company and provide
+strategic Financial guidance to the
+executive team Gonzalo has very strong
+analytical skills which helps him to use
+data and financial information to make
+informed decisions and identify
+opportunities for growth and Improvement
+additionally Gonzalo got the highest
+grade for accounting so he is the best
+candidate for this role Patricia is our
+chief marketing officer because she has
+a strong combination of strategic
+analytical creative and interpersonal
+skills to lead a company's marketing
+efforts to drive to drive growth
+she has very good collaboration skills
+and loves working with people Patricia
+manages marketing team and the sales
+team which consists of digital marketing
+director and sales manager and I am the
+chief technical officer because I have
+deep technical understanding of the
+project and pay great attention to
+detail I took leading roles in multiple
+engineering projects where I develop
+various technical skills that can be
+easily transferred and applied in any
+engineering projects I manage the
+engineering team which consists of lead
+engineer senior engineer and Junior
+engineer for the prototyping stage we
+would employ more people in the
+engineering team as well as marketing
+and sales team in order to work more
+efficiently and start selling faster.
+
+Slide 21
+we will also be hiring externals such as
+a web developer to help us build and
+retain a web app which can then be used
+alongside our product they will also
+help with our website where our products
+will be available to purchase alongside
+access to specifications warehouse
+workers will also be hired to oversee
+production and handle the Machinery
+whilst lawyers will also ensure that our
+patents and legal Logistics are all
+sorted out and are in order
+
+Slide 22
+so here is the Gantt chart showing our
+post timeline for the products
+development and launch over the upcoming
+year
+
+Slide 23
+we did not have a very strong emphasis
+on documentation worked rather on
+delivering the product as soon as
+possible and iteratively made
+adjustments to our project as we went
+along so our project model was more like
+agile with regular scrum meetings and
+intensive Sprints where Kelvin was our
+scrum master and we collaborated to
+improve our project idea
+as for communication of changes we
+decided to put our suggestions or
+concerns on the table straight away in
+the beginning of our scrum meetings and
+then we collaboratively made a decision
+
+Slide 24
+our break-even analysis shows that we
+need to sell around 40 000 kids to reach
+the break-even point which translates to
+1.88 million in Revenue
+this is a reasonable Target considering
+the size of the market and the unique
+offering of projects in an education
+robot toy space
+with the cost per kit of 11.58 pounds
+and an estimated profit of 30.17 pounds
+per kids we are confident in the
+potential of our business
+
+Slide 25
+based on our financial projections we
+anticipate achieving sustained net
+profits by 2026 with a project on
+profits of 3 million by 2029 with a
+solid business plan and Innovative
+products and a growing Market we believe
+that our company has the potential for
+substantial growth and long-term success
+by investing in our business you will
+not only by supporting a promising
+Venture but also stand to benefits from
+significance Returns on your investment
+of course our business model is not only
+focused on the profitability but also on
+generating value for our investors.
+
+Slide 26
+with a 20 internal rates of return and a
+five-year payback periods investing to
+our company is a smart choice
+
+Slide 27
+we are aiming to build a 670 gram robot
+with a similar size to a book or a diary
+the main chassis is going to be built of
+aluminum due to structural properties as
+well as the impact of it it creates to
+the environment our educational toy
+comes with a comprehensive set of
+educational materials including manuals
+tutorials and lesson plans to guide
+users throughout the project as well as
+advising of safety houses and conduct
+use of the robot before releasing our
+Martian inspired educational Authority
+
+Slide 28
+we will conduct extensive user testing
+to ensure its safety efficacy and user
+friendliness we will seek the assistance
+of experts in the field of Robotics to
+test the efficiency and validity of the
+robot design ensuring that it functions
+properly and provides students with a
+beneficial learning opportunity finally
+we will conduct user testing with high
+school students in order to obtain their
+feedback and ensure that data is both
+enjoyable and engaging this testing will
+allow us to fine-tune the design of a
+toy and ensure that an ensure that it
+meets the needs and expectations of our
+Target demographic.
+
+Slide 29
+the robot's bill of materials estimate the raw cost of the
+materials our base model production is
+5000 units and the total amount total
+spent is of 21 838 pounds resulting in a
+cost per product of 3.97 pounds we also
+have to take into account that these
+costs exclude the indirect costs like
+labor manufacturing or energy on top of
+this as shown in an add-on spell of
+materials we can see that as complexity
+increases the kit price increases.
+
+Slide 30
+to help us achieve our mission of inspiring
+and educating the next generation of
+explorers and engineers
+we are seeking of a total of 1 million
+or in funding to cover our expenses and
+fill our growth by investing in role for
+X you are not only investing in the
+future of education but also the future
+of space exploration rule learning out of this world. Thank you.

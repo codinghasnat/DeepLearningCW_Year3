@@ -1,0 +1,151 @@
+#Paart 2
+
+from keras.applications.vgg16 import VGG16
+from keras.models import Model
+from keras.layers import Dense, Flatten, Input, Lambda
+from keras.optimizers import Adam
+import matplotlib.pyplot as plt
+import tensorflow as tf
+
+start_time = time.time()
+
+# Define the input shape for the resized images
+newInput = Input(shape=(64, 64, 3))
+
+# Add Lambda layer to resize the input images to (224, 224)
+resize_layer = Lambda(lambda image: tf.image.resize(image, (224, 224)))
+
+# Pass the resized images through the VGG16 base model
+resized_input = resize_layer(newInput)
+base_model = VGG16(weights='imagenet', include_top=False, input_tensor=resized_input)
+
+# Freeze all layers except the dense layers you added for classification
+for layer in base_model.layers:
+    layer.trainable = False
+
+# Add custom dense layers for classification
+x = Flatten()(base_model.output)
+output = Dense(200, activation='softmax')(x)  # Assuming 10 classes for your specific dataset
+
+# Create the final model
+model = Model(inputs=newInput, outputs=output)
+
+# Compile the model with appropriate loss and optimizer
+model.compile(optimizer=Adam(learning_rate=1e-4), loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Display model summary
+model.summary()
+
+# Train the model
+history = model.fit(train_data, train_labels, epochs=20, batch_size=128, validation_data=(val_data, val_labels))
+
+# Evaluate the model on the test set
+score = model.evaluate(test_data, test_labels)
+time_elapsed = time.time() - start_time
+
+print('Test loss:', score[0])
+print('Test accuracy:', score[1])
+print('Average inference time per image: {:.4f} (ms)'.format(1000 * time_elapsed / len(test_data)))
+
+
+----
+
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/vgg16/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
+58889256/58889256 [==============================] - 4s 0us/step
+Model: "model_5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_9 (InputLayer)        [(None, 64, 64, 3)]       0         
+                                                                 
+ lambda_8 (Lambda)           (None, 224, 224, 3)       0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 224, 224, 64)      1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 224, 224, 64)      36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 112, 112, 64)      0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 112, 112, 128)     73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 112, 112, 128)     147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 56, 56, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 56, 56, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 56, 56, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 28, 28, 256)       0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 28, 28, 512)       1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 28, 28, 512)       2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 14, 14, 512)       0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 14, 14, 512)       2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 7, 7, 512)         0         
+                                                                 
+ flatten_6 (Flatten)         (None, 25088)             0         
+                                                                 
+ dense_18 (Dense)            (None, 200)               5017800   
+                                                                 
+=================================================================
+Total params: 19732488 (75.27 MB)
+Trainable params: 5017800 (19.14 MB)
+Non-trainable params: 14714688 (56.13 MB)
+_________________________________________________________________
+Epoch 1/20
+704/704 [==============================] - 54s 75ms/step - loss: 3.0109 - accuracy: 0.3537 - val_loss: 2.3193 - val_accuracy: 0.4707
+Epoch 2/20
+704/704 [==============================] - 52s 74ms/step - loss: 1.7524 - accuracy: 0.6046 - val_loss: 2.0580 - val_accuracy: 0.5157
+Epoch 3/20
+704/704 [==============================] - 52s 74ms/step - loss: 1.3045 - accuracy: 0.7143 - val_loss: 1.9567 - val_accuracy: 0.5356
+Epoch 4/20
+704/704 [==============================] - 52s 74ms/step - loss: 1.0048 - accuracy: 0.7935 - val_loss: 1.9177 - val_accuracy: 0.5384
+Epoch 5/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.7821 - accuracy: 0.8539 - val_loss: 1.9163 - val_accuracy: 0.5399
+Epoch 6/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.6108 - accuracy: 0.9004 - val_loss: 1.8976 - val_accuracy: 0.5420
+Epoch 7/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.4768 - accuracy: 0.9332 - val_loss: 1.9109 - val_accuracy: 0.5403
+Epoch 8/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.3733 - accuracy: 0.9570 - val_loss: 1.9082 - val_accuracy: 0.5443
+Epoch 9/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.2917 - accuracy: 0.9717 - val_loss: 1.9327 - val_accuracy: 0.5424
+Epoch 10/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.2279 - accuracy: 0.9822 - val_loss: 1.9341 - val_accuracy: 0.5432
+Epoch 11/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.1783 - accuracy: 0.9884 - val_loss: 1.9543 - val_accuracy: 0.5425
+Epoch 12/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.1392 - accuracy: 0.9926 - val_loss: 1.9741 - val_accuracy: 0.5415
+Epoch 13/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.1096 - accuracy: 0.9956 - val_loss: 2.0086 - val_accuracy: 0.5400
+Epoch 14/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0861 - accuracy: 0.9973 - val_loss: 2.0290 - val_accuracy: 0.5408
+Epoch 15/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0681 - accuracy: 0.9983 - val_loss: 2.0524 - val_accuracy: 0.5420
+Epoch 16/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0537 - accuracy: 0.9990 - val_loss: 2.0789 - val_accuracy: 0.5393
+Epoch 17/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0430 - accuracy: 0.9993 - val_loss: 2.1024 - val_accuracy: 0.5420
+Epoch 18/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0343 - accuracy: 0.9996 - val_loss: 2.1423 - val_accuracy: 0.5381
+Epoch 19/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0274 - accuracy: 0.9996 - val_loss: 2.1575 - val_accuracy: 0.5396
+Epoch 20/20
+704/704 [==============================] - 52s 74ms/step - loss: 0.0224 - accuracy: 0.9996 - val_loss: 2.1850 - val_accuracy: 0.5394
+313/313 [==============================] - 6s 19ms/step - loss: 2.2261 - accuracy: 0.5345
+Test loss: 2.2261416912078857
+Test accuracy: 0.534500002861023
+Average inference time per image: 105.9994 (ms)
